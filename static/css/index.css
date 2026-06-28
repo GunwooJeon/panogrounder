@@ -195,3 +195,121 @@ body {
   .publication-title { font-size: 1.7rem !important; }
   .author-block { display: inline-block; margin: 0.2rem 0.4rem; }
 }
+
+/* ============================================================
+   Results — 정량 표 스타일
+   ============================================================ */
+
+.result-table-wrap {
+  overflow-x: auto;
+  margin: 1rem 0 0.4rem;
+}
+
+table.result-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  font-variant-numeric: tabular-nums;
+}
+
+table.result-table th,
+table.result-table td {
+  padding: 7px 10px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* 첫 열(방법명)은 왼쪽 정렬 */
+table.result-table th:first-child,
+table.result-table td:first-child {
+  text-align: left;
+  font-weight: 500;
+}
+
+/* 헤더 */
+table.result-table thead th {
+  border-bottom: 2px solid #2c2c30;
+  font-weight: 600;
+  color: #2c2c30;
+}
+
+/* 그룹 구분선 행 (Single Dataset / Multi Dataset 등) */
+table.result-table tr.group-row td {
+  text-align: left;
+  font-weight: 600;
+  color: var(--accent-dark);
+  background: #f6f5fb;
+  border-top: 1px solid #e7e3f5;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+table.result-table tbody td {
+  border-bottom: 1px solid #eee;
+  color: #3a3a40;
+}
+
+/* Ours 행 강조 (보라 옅은 배경 + 굵게) */
+table.result-table tr.ours-row td {
+  background: #f0edff;
+  font-weight: 600;
+  color: var(--accent-dark);
+  border-bottom: 1px solid #ddd6ff;
+}
+table.result-table tr.ours-row td:first-child {
+  color: var(--accent-dark);
+}
+
+/* best 숫자 굵게 */
+table.result-table .best { font-weight: 700; }
+
+/* 표 캡션 */
+.table-caption {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0.5rem 0 0;
+  line-height: 1.5;
+}
+.table-caption b { color: var(--accent-dark); }
+
+/* 보조 표 2개를 나란히 (데스크탑) */
+.table-duo {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.table-duo > div {
+  flex: 1 1 300px;
+  min-width: 0;
+}
+.table-duo h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--accent-dark);
+  margin-bottom: 0.3rem;
+}
+
+/* 메인 표 살짝 더 넓게 보이도록 컨테이너 확장 */
+.results-wide {
+  max-width: 1000px;
+}
+
+@media screen and (max-width: 768px) {
+  table.result-table { font-size: 0.8rem; }
+  table.result-table th, table.result-table td { padding: 5px 6px; }
+}
+
+/* 데이터셋 그룹 사이 세로 구분선 */
+table.result-table th.grp-sep,
+table.result-table td.grp-sep {
+  border-left: 1px solid #e3e0ef;
+}
+table.result-table thead th {
+  font-size: 0.86rem;
+  padding: 5px 8px;
+}
+
+/* 컬럼 많은 보조 표(Table 3)는 나란히보다 세로로 쌓는 게 가독성 좋음 */
+.table-duo { gap: 2rem; }
+.table-duo > div { flex: 1 1 100%; }
