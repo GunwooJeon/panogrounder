@@ -1,18 +1,12 @@
-/* ============================================================
-   PanoGrounder project page — custom theme
-   폰트: Inter (모던 산세리프)  /  포인트 색: 보라
-   색을 바꾸고 싶으면 아래 :root 의 --accent 한 줄만 고치면 됩니다.
-   ============================================================ */
 
 :root {
-  --accent: #6c5ce7;          /* 보라 포인트 컬러 (버튼/강조) */
-  --accent-dark: #4b3fc4;     /* hover 시 더 진한 보라 */
-  --ink: #1d1d20;             /* 본문 글자 */
-  --muted: #6b6b73;           /* 회색 보조 글자 */
+  --accent: #6c5ce7;          
+  --accent-dark: #4b3fc4;     
+  --ink: #1d1d20;             
+  --muted: #6b6b73;           
   --bg: #ffffff;
 }
 
-/* 전체 폰트를 Inter 로 */
 body,
 .title,
 .subtitle,
@@ -28,7 +22,6 @@ body {
   background: var(--bg);
 }
 
-/* ---- Hero (상단) ---- */
 .hero-body {
   padding-top: 3.5rem;
   padding-bottom: 2rem;
@@ -42,7 +35,6 @@ body {
   margin-bottom: 1.2rem !important;
 }
 
-/* ECCV 배지 */
 .venue-badge {
   display: inline-block;
   font-size: 0.8rem;
@@ -85,7 +77,6 @@ body {
   margin-bottom: 1.8rem !important;
 }
 
-/* ---- 상단 버튼 ---- */
 .publication-links {
   margin-top: 0.5rem;
 }
@@ -104,7 +95,6 @@ body {
   transform: translateY(-1px);
 }
 
-/* Code 버튼만 보라색 강조 (HTML 에서 is-accent 클래스 부여) */
 .publication-links .button.is-accent {
   background: var(--accent);
 }
@@ -112,7 +102,6 @@ body {
   background: var(--accent-dark);
 }
 
-/* ---- Teaser 이미지 ---- */
 .teaser img {
   border-radius: 14px;
   box-shadow: 0 8px 30px rgba(0,0,0,0.08);
@@ -124,7 +113,6 @@ body {
   font-size: 1.05rem;
 }
 
-/* ---- 섹션 제목 ---- */
 .section .title.is-3 {
   font-weight: 700;
   letter-spacing: -0.01em;
@@ -139,7 +127,6 @@ body {
   margin-bottom: 0.6rem;
 }
 
-/* 본문 가독성 */
 .content {
   font-size: 1.08rem;
   line-height: 1.75;
@@ -154,7 +141,6 @@ body {
   font-style: normal;
 }
 
-/* 본문 이미지 */
 .section .content img {
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.06);
@@ -162,7 +148,6 @@ body {
   max-width: 100%;
 }
 
-/* ---- BibTeX ---- */
 #BibTeX .title {
   font-weight: 700;
 }
@@ -181,7 +166,6 @@ body {
   background: transparent;
 }
 
-/* ---- Footer ---- */
 .footer {
   background: #faf9fe;
   padding: 2.5rem 1.5rem 3rem;
@@ -190,15 +174,10 @@ body {
   color: var(--accent-dark);
 }
 
-/* 모바일 */
 @media screen and (max-width: 768px) {
   .publication-title { font-size: 1.7rem !important; }
   .author-block { display: inline-block; margin: 0.2rem 0.4rem; }
 }
-
-/* ============================================================
-   Results — 정량 표 스타일
-   ============================================================ */
 
 .result-table-wrap {
   overflow-x: auto;
@@ -219,21 +198,18 @@ table.result-table td {
   white-space: nowrap;
 }
 
-/* 첫 열(방법명)은 왼쪽 정렬 */
 table.result-table th:first-child,
 table.result-table td:first-child {
   text-align: left;
   font-weight: 500;
 }
 
-/* 헤더 */
 table.result-table thead th {
   border-bottom: 2px solid #2c2c30;
   font-weight: 600;
   color: #2c2c30;
 }
 
-/* 그룹 구분선 행 (Single Dataset / Multi Dataset 등) */
 table.result-table tr.group-row td {
   text-align: left;
   font-weight: 600;
@@ -249,7 +225,6 @@ table.result-table tbody td {
   color: #3a3a40;
 }
 
-/* Ours 행 강조 (보라 옅은 배경 + 굵게) */
 table.result-table tr.ours-row td {
   background: #f0edff;
   font-weight: 600;
@@ -260,10 +235,8 @@ table.result-table tr.ours-row td:first-child {
   color: var(--accent-dark);
 }
 
-/* best 숫자 굵게 */
 table.result-table .best { font-weight: 700; }
 
-/* 표 캡션 */
 .table-caption {
   font-size: 0.9rem;
   color: var(--muted);
@@ -272,7 +245,6 @@ table.result-table .best { font-weight: 700; }
 }
 .table-caption b { color: var(--accent-dark); }
 
-/* 보조 표 2개를 나란히 (데스크탑) */
 .table-duo {
   display: flex;
   gap: 1.5rem;
@@ -290,7 +262,6 @@ table.result-table .best { font-weight: 700; }
   margin-bottom: 0.3rem;
 }
 
-/* 메인 표 살짝 더 넓게 보이도록 컨테이너 확장 */
 .results-wide {
   max-width: 1000px;
 }
@@ -300,7 +271,6 @@ table.result-table .best { font-weight: 700; }
   table.result-table th, table.result-table td { padding: 5px 6px; }
 }
 
-/* 데이터셋 그룹 사이 세로 구분선 */
 table.result-table th.grp-sep,
 table.result-table td.grp-sep {
   border-left: 1px solid #e3e0ef;
@@ -310,6 +280,5 @@ table.result-table thead th {
   padding: 5px 8px;
 }
 
-/* 컬럼 많은 보조 표(Table 3)는 나란히보다 세로로 쌓는 게 가독성 좋음 */
 .table-duo { gap: 2rem; }
 .table-duo > div { flex: 1 1 100%; }

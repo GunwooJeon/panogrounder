@@ -30,23 +30,16 @@
 </head>
 <body>
 
-
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
 
-          <!-- 학회 배지 -->
           <span class="venue-badge">ECCV 2026</span>
 
           <h1 class="title is-1 publication-title">PanoGrounder: Bridging 2D and 3D with Panoramic Scene Representations for VLM-based 3D Visual Grounding</h1>
 
-          <!-- ============================================================ -->
-          <!-- AUTHORS — 저자 5명. 아래 이름/링크/소속 번호를 채우세요.      -->
-          <!--   - 이름 클릭 시 개인 홈페이지로 보내려면 href 를 채우기      -->
-          <!--   - 소속 번호는 <sup>1</sup> 처럼, 공동소속은 <sup>1,2</sup>  -->
-          <!-- ============================================================ -->
           <div class="is-size-5 publication-authors">
             <span class="author-block"><a href="#">Seongmin Jung</a><sup>1</sup>,</span>
             <span class="author-block"><a href="#">Seongho Choi</a><sup>1</sup>,</span>
@@ -55,7 +48,6 @@
             <span class="author-block"><a href="#">Jongwoo Lim</a><sup>1</sup></span>
           </div>
 
-          <!-- 소속 -->
           <div class="is-size-5 publication-authors affiliations">
             <span class="author-block"><sup>1</sup>Seoul National University,</span>
             <span class="author-block"><sup>2</sup>POSTECH</span>
@@ -63,10 +55,7 @@
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- ==================================================== -->
-              <!-- TODO: PDF / arXiv 링크는 준비되면 href 의 # 를 교체   -->
-              <!-- ==================================================== -->
-              <!-- PDF Link. -->
+              
               <span class="link-block">
                 <a href="#"
                    class="external-link button is-normal is-rounded">
@@ -76,7 +65,7 @@
                   <span>Paper</span>
                 </a>
               </span>
-              <!-- arXiv Link. -->
+              
               <span class="link-block">
                 <a href="#"
                    class="external-link button is-normal is-rounded">
@@ -86,7 +75,7 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Code Link. (동료 repo) — 보라 강조 -->
+              
               <span class="link-block">
                 <a href="https://github.com/ChoiSeongHo-h/PanoGrounder"
                    class="external-link button is-normal is-rounded is-accent">
@@ -104,11 +93,6 @@
   </div>
 </section>
 
-
-<!-- ================================================================== -->
-<!-- TEASER  -->
-<!-- TODO: static/images/teaser.png 에 대표 그림(예: 본문 Fig.1) 넣기   -->
-<!-- ================================================================== -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
@@ -121,10 +105,9 @@
   </div>
 </section>
 
-
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
+    
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
@@ -155,21 +138,16 @@
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
+    
   </div>
 </section>
 
-
-<!-- ================================================================== -->
-<!-- METHOD / PIPELINE                                                  -->
-<!-- ================================================================== -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">The PanoGrounder Framework</h2>
 
-        <!-- TODO: static/images/pipeline.png 에 본문 Fig.2 (overall pipeline) 넣기 -->
         <div class="content has-text-centered">
           <img src="./static/images/pipeline.png" alt="PanoGrounder pipeline"/>
         </div>
@@ -183,7 +161,6 @@
           </p>
         </div>
 
-        <!-- Stage 1 -->
         <h3 class="title is-4">1. Structure-Aware Camera Placement</h3>
         <div class="content has-text-justified">
           <p>
@@ -196,7 +173,6 @@
           </p>
         </div>
 
-        <!-- Stage 2 -->
         <h3 class="title is-4">2. Multi-Modal Panoramic VLM</h3>
         <div class="content has-text-justified">
           <p>
@@ -209,7 +185,6 @@
           </p>
         </div>
 
-        <!-- Stage 3 -->
         <h3 class="title is-4">3. Visibility-Aware 3D Aggregation</h3>
         <div class="content has-text-justified">
           <p>
@@ -225,18 +200,12 @@
   </div>
 </section>
 
-
-<!-- ================================================================== -->
-<!-- QUANTITATIVE RESULTS                                               -->
-<!-- TODO: 모든 숫자는 논문 표 기준. 최종 수치 바뀌면 여기 td 값만 수정 -->
-<!-- ================================================================== -->
 <section class="section">
   <div class="container results-wide">
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Quantitative Results</h2>
 
-        <!-- ===== 메인 표 (Tab.1) — 크게 단독 ===== -->
         <h3 class="title is-4">3D Visual Grounding on Nr3D, Sr3D, and ScanRefer</h3>
         <div class="content has-text-justified">
           <p>
@@ -342,9 +311,8 @@
           highlighted; <b>bold</b> marks the best in a column within each training regime.
         </p>
 
-        <!-- ===== 보조 표 2개 — 세트로 나란히 ===== -->
         <div class="table-duo">
-          <!-- Tab.2 Zero-shot (full splits) -->
+          
           <div>
             <h4>Zero-Shot on Nr3D</h4>
             <div class="result-table-wrap">
@@ -369,7 +337,6 @@
             </p>
           </div>
 
-          <!-- Tab.3 Cross-dataset generalization (full) -->
           <div>
             <h4>Cross-Dataset Generalization</h4>
             <div class="result-table-wrap">
@@ -423,12 +390,6 @@
   </div>
 </section>
 
-
-<!-- ================================================================== -->
-<!-- QUALITATIVE RESULTS                                                -->
-<!-- TODO: 결과 gif / 이미지 준비되면 아래 자리에 채우기.                -->
-<!--   - 성공 갤러리, 3D-VisTA 비교, feature 효과, cross-dataset 등      -->
-<!-- ================================================================== -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
@@ -443,7 +404,6 @@
           </p>
         </div>
 
-        <!-- TODO: 여기에 결과 이미지/gif 갤러리. 임시 placeholder -->
         <div class="content has-text-centered">
           <img src="./static/images/results.png" alt="Qualitative results (placeholder)"/>
         </div>
@@ -452,11 +412,10 @@
   </div>
 </section>
 
-
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <!-- TODO: 저자명/페이지 번호 확정되면 교체하세요. -->
+    
     <pre><code>@inproceedings{jung2026panogrounder,
   title     = {PanoGrounder: Bridging 2D and 3D with Panoramic Scene Representations
                for VLM-based 3D Visual Grounding},
@@ -466,7 +425,6 @@
 }</code></pre>
   </div>
 </section>
-
 
 <footer class="footer">
   <div class="container">
