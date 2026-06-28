@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="PanoGrounder: Bridging 2D and 3D with Panoramic Scene Representations for VLM-based 3D Visual Grounding.">
+  <meta name="keywords" content="3D Visual Grounding, Panoramic Vision, Vision-Language Model, Scene Understanding">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PanoGrounder</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+
+          <!-- 학회 배지 -->
+          <span class="venue-badge">ECCV 2026</span>
+
+          <h1 class="title is-1 publication-title">PanoGrounder: Bridging 2D and 3D with Panoramic Scene Representations for VLM-based 3D Visual Grounding</h1>
+
+          <!-- ============================================================ -->
+          <!-- AUTHORS — 저자 5명. 아래 이름/링크/소속 번호를 채우세요.      -->
+          <!--   - 이름 클릭 시 개인 홈페이지로 보내려면 href 를 채우기      -->
+          <!--   - 소속 번호는 <sup>1</sup> 처럼, 공동소속은 <sup>1,2</sup>  -->
+          <!-- ============================================================ -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="#">Author One</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="#">Author Two</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="#">Author Three</a><sup>2</sup>,</span>
+            <span class="author-block"><a href="#">Author Four</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="#">Author Five</a><sup>1,2</sup></span>
+          </div>
+
+          <!-- 소속 -->
+          <div class="is-size-5 publication-authors affiliations">
+            <span class="author-block"><sup>1</sup>Affiliation A,</span>
+            <span class="author-block"><sup>2</sup>Affiliation B</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- ==================================================== -->
+              <!-- TODO: PDF / arXiv 링크는 준비되면 href 의 # 를 교체   -->
+              <!-- ==================================================== -->
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- arXiv Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. (동료 repo) — 보라 강조 -->
+              <span class="link-block">
+                <a href="https://github.com/ChoiSeongHo-h/PanoGrounder"
+                   class="external-link button is-normal is-rounded is-accent">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================================== -->
+<!-- TEASER  -->
+<!-- TODO: static/images/teaser.png 에 대표 그림(예: 본문 Fig.1) 넣기   -->
+<!-- ================================================================== -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/teaser.png" alt="PanoGrounder teaser"/>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">PanoGrounder</span> localizes referred objects in 3D scenes by
+        leveraging panoramic renderings as a 2D&ndash;3D interface.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            3D Visual Grounding (3DVG) is a critical bridge from vision-language perception to
+            robotics, requiring both language understanding and 3D scene reasoning. Traditional
+            supervised models leverage explicit 3D geometry but exhibit limited generalization,
+            owing to the scarcity of 3D vision-language datasets and the limited reasoning
+            capabilities compared to modern vision-language models (VLMs).
+          </p>
+          <p>
+            We propose a generalizable 3DVG framework, <span class="dnerf">PanoGrounder</span>,
+            that couples a multi-modal panoramic representation with pretrained 2D VLMs for strong
+            vision-language reasoning. Panoramic renderings, augmented with 3D semantic and
+            geometric features, serve as an intermediate representation between 2D and 3D, and offer
+            two major benefits: (i) they can be directly fed to VLMs with minimal adaptation and
+            (ii) they retain long-range object-to-object relations thanks to their 360-degree field
+            of view. We devise a three-stage pipeline that places a compact set of panoramic
+            viewpoints considering the scene layout and geometry, grounds a text query on each
+            panoramic rendering with a VLM, and fuses per-view predictions into a single 3D bounding
+            box via lifting.
+          </p>
+          <p>
+            Our approach achieves state-of-the-art results on ScanRefer and Nr3D, and demonstrates
+            strong generalization to unseen 3D datasets and text rephrasings.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<!-- ================================================================== -->
+<!-- METHOD / PIPELINE                                                  -->
+<!-- ================================================================== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">The PanoGrounder Framework</h2>
+
+        <!-- TODO: static/images/pipeline.png 에 본문 Fig.2 (overall pipeline) 넣기 -->
+        <div class="content has-text-centered">
+          <img src="./static/images/pipeline.png" alt="PanoGrounder pipeline"/>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            We assume the 3D scene is given as a renderable representation (e.g., a triangle mesh or
+            3D Gaussian Splatting). Given such a representation and a text query, our goal is to
+            predict a 3D bounding box of the referred object. Our key idea is to use panoramic
+            renderings as an intermediate representation that bridges 2D vision-language
+            understanding and 3D spatial reasoning. The pipeline operates in three stages.
+          </p>
+        </div>
+
+        <!-- Stage 1 -->
+        <h3 class="title is-4">1. Structure-Aware Camera Placement</h3>
+        <div class="content has-text-justified">
+          <p>
+            Panoramic cameras capture an omnidirectional view of the scene, so we only need to
+            select <i>locations</i>. We estimate the floor via RANSAC and place a regular grid over
+            the scene's 2D floor footprint. Each candidate location is scored by three factors
+            &mdash; ray coverage, distance-to-surface, and distance-to-trajectory &mdash; and a
+            compact set of viewpoints is greedily selected until the scene is sufficiently covered
+            (on average only 2.4 cameras per scene).
+          </p>
+        </div>
+
+        <!-- Stage 2 -->
+        <h3 class="title is-4">2. Multi-Modal Panoramic VLM</h3>
+        <div class="content has-text-justified">
+          <p>
+            For each viewpoint we render multi-modal panoramas &mdash; RGB, geometric (range), and
+            semantic feature maps. Geometric and semantic features are injected into selected ViT
+            layers of the VLM through a lightweight multi-modal feature adapter (a 2-layer MLP
+            followed by a zero-initialized 1&times;1 convolution), so the VLM starts from its
+            pretrained behavior and learns task-relevant cues without distorting its representation
+            space. The VLM then predicts a 2D bounding box on each panorama from the text query.
+          </p>
+        </div>
+
+        <!-- Stage 3 -->
+        <h3 class="title is-4">3. Visibility-Aware 3D Aggregation</h3>
+        <div class="content has-text-justified">
+          <p>
+            Per-view 2D predictions are lifted into metric 3D space using the rendered depth and
+            camera extrinsics. We select the most reliable anchor view via a cross-view consistency
+            score, fuse the per-view point sets, filter by visibility, and fit an axis-aligned 3D
+            bounding box to localize the referred object. The model is trained with cross-entropy
+            combined with an Earth Mover's Distance (EMD) loss for distance-aware supervision.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================================== -->
+<!-- RESULTS                                                            -->
+<!-- ================================================================== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results</h2>
+
+        <h3 class="title is-4">3D Visual Grounding on ScanRefer and Nr3D</h3>
+        <div class="content has-text-justified">
+          <p>
+            <span class="dnerf">PanoGrounder</span> achieves state-of-the-art performance among
+            single-dataset methods, reaching <b>61.0</b> Overall Acc@0.25 on ScanRefer and
+            <b>74.6</b> Overall on Nr3D, with especially strong gains in multi-object scenes. Joint
+            training on ScanRefer + ReferIt3D (S+R) further improves these to <b>62.0</b> and
+            <b>76.1</b>.
+          </p>
+        </div>
+
+        <h3 class="title is-4">Zero-Shot Comparison with Larger VLMs</h3>
+        <div class="content has-text-justified">
+          <p>
+            Without any fine-tuning, our pipeline with CogVLM-17B outperforms zero-shot baselines
+            built on much larger backbones (e.g., GPT-4V, Qwen2-VL-72B), achieving <b>53.2</b>
+            Overall on Nr3D &mdash; surpassing VLM-Grounder's 48.0 despite a significantly smaller
+            backbone.
+          </p>
+        </div>
+
+        <h3 class="title is-4">Generalization to Unseen Scenes and Text</h3>
+        <div class="content has-text-justified">
+          <p>
+            The method transfers effectively to unseen 3D datasets (ARKitScenes, 3RScan) with much
+            smaller performance degradation than prior baselines, and remains robust under
+            challenging text perturbations &mdash; including affordance-based queries that remove the
+            target object's class name, where it improves over PQ3D by <b>+15.9</b>.
+          </p>
+        </div>
+
+        <!-- TODO: static/images/results.png 에 정성 결과 그림(예: Fig.4 또는 Fig.11) 넣기 -->
+        <div class="content has-text-centered">
+          <img src="./static/images/results.png" alt="Qualitative results"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <!-- TODO: 저자명/페이지 번호 확정되면 교체하세요. -->
+    <pre><code>@inproceedings{author2026panogrounder,
+  title     = {PanoGrounder: Bridging 2D and 3D with Panoramic Scene Representations
+               for VLM-based 3D Visual Grounding},
+  author    = {Author One and Author Two and Author Three and Author Four and Author Five},
+  booktitle = {Proceedings of the European Conference on Computer Vision (ECCV)},
+  year      = {2026},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            This website is licensed under a <a rel="license"
+              href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            The website template is borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
