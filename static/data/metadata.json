@@ -1,0 +1,111 @@
+{
+  "scenes": [
+    "scene0653_00",
+    "scene0616_00",
+    "scene0231_00",
+    "scene0426_00",
+    "scene0011_00",
+    "scene0608_00",
+    "scene0277_00",
+    "scene0050_00",
+    "scene0494_00",
+    "scene0084_00",
+    "scene0030_00",
+    "scene0314_00"
+  ],
+  "scene_meta": {
+    "scene0653_00": {
+      "cam_ids": [
+        "cam_0",
+        "cam_1",
+        "cam_2",
+        "cam_3"
+      ],
+      "text_count": 31
+    },
+    "scene0616_00": {
+      "cam_ids": [
+        "cam_0"
+      ],
+      "text_count": 28
+    },
+    "scene0231_00": {
+      "cam_ids": [
+        "cam_0",
+        "cam_1",
+        "cam_2",
+        "cam_3",
+        "cam_4",
+        "cam_5",
+        "cam_6"
+      ],
+      "text_count": 35
+    },
+    "scene0426_00": {
+      "cam_ids": [
+        "cam_0"
+      ],
+      "text_count": 49
+    },
+    "scene0011_00": {
+      "cam_ids": [
+        "cam_0",
+        "cam_1",
+        "cam_2",
+        "cam_3",
+        "cam_4",
+        "cam_5",
+        "cam_6"
+      ],
+      "text_count": 28
+    },
+    "scene0608_00": {
+      "cam_ids": [
+        "cam_0",
+        "cam_1",
+        "cam_2"
+      ],
+      "text_count": 54
+    },
+    "scene0277_00": {
+      "cam_ids": [
+        "cam_0"
+      ],
+      "text_count": 27
+    },
+    "scene0050_00": {
+      "cam_ids": [
+        "cam_0"
+      ],
+      "text_count": 47
+    },
+    "scene0494_00": {
+      "cam_ids": [
+        "cam_0",
+        "cam_1"
+      ],
+      "text_count": 16
+    },
+    "scene0084_00": {
+      "cam_ids": [
+        "cam_0",
+        "cam_1",
+        "cam_2"
+      ],
+      "text_count": 17
+    },
+    "scene0030_00": {
+      "cam_ids": [
+        "cam_0",
+        "cam_1"
+      ],
+      "text_count": 8
+    },
+    "scene0314_00": {
+      "cam_ids": [
+        "cam_0"
+      ],
+      "text_count": 11
+    }
+  }
+}
