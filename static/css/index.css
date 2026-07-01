@@ -250,7 +250,7 @@ table.result-table tr.ours-row td:first-child {
   color: var(--accent-dark);
 }
 
-table.result-table .best { font-weight: 700; }
+table.result-table .best { font-weight: inherit; }
 
 .table-caption {
   font-size: 0.9rem;
