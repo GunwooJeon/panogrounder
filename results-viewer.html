@@ -251,7 +251,7 @@ function makeLabelSprite(text, hex){
   cx.fillText(text, c.width/2, c.height/2 + 2);
   const tex = new THREE.CanvasTexture(c); tex.minFilter = THREE.LinearFilter;
   const spr = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, depthTest: false, transparent: true }));
-  spr.scale.set(0.5*(c.width/c.height), 0.5, 1);
+  spr.scale.set(0.333*(c.width/c.height), 0.333, 1);
   return spr;
 }
 // place a colored sphere + label at every panorama camera position
