@@ -139,7 +139,7 @@ sup.eq { color: var(--accent); font-weight: 600; }
   line-height: 1.75;
   color: #2c2c30;
 }
-.content b { color: var(--accent-dark); }
+.content b { color: inherit; }
 
 .dnerf {
   font-weight: 700;
